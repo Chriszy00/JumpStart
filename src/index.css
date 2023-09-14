@@ -1,0 +1,35 @@
+@font-face {
+  font-family: SatoshiReg;
+  src: url(/src/assets/fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf)
+}
+@font-face {
+  font-family: SatoshiBold;
+  src: url(/src/assets/fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Bold.otf);
+}
+@font-face {
+  font-family: SatoshiLight;
+  src: url(/src/assets/fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Light.otf);
+}
+@font-face {
+  font-family: SatoshiMed;
+  src: url(/src/assets/fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Medium.otf);
+}
+@font-face {
+  font-family: SatoshiBlack;
+  src: url(/src/assets/fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Black.otf);
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SatoshiReg', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
