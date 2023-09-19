@@ -3,12 +3,23 @@ import { Link, useNavigate } from "react-router-dom";
 import "../../assets/css/style-t&c.css";
 import { ACCESS_TOKEN, FIRST_NAME, PHONE_NUMBER, ROLE_NAME, ID, EMAIL } from "../../constant/index";
 import { login } from "../../util/APIUtils";
-import { notification } from "antd";
+import { notification, Modal, Button } from "antd";
 
 function Login() {
   const navigate = useNavigate();
   const [successMessage, setSuccessMessage] = useState(""); // State to store success message
   const isLoggedIn = "isLoggedIn";
+  const [open, setOpen] = useState(false);
+
+  const showModal = () => {
+    setOpen(true);
+  }
+
+  const handleCancel = () => {
+    setOpen(false);
+  }
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -58,18 +69,19 @@ function Login() {
           });
         }
       });
+      
   };
 
   return (
-    <div className="container-fluid min-vh-100 bg custom-font custom-vh">
+    <div className="container-fluid min-vh-100 bg custom-font custom-vh" style={{ backgroundColor: "#fcf3f6" }}>
       <div className="row">
         <div className="col-md-4">
           <div className="welcome-register">
             <div className="image-holder">
               <img src="/images/merryOnwheels.png" alt="logo" />
             </div>
-            <h4 className="text-muted ms-5 pt-1">Welcome Back</h4>
-            <h2 className="ms-5 pt-2">Sign in to JUMPSTART</h2>
+            <h4 className="text-muted ms-5 pt-1 custom-font">Welcome Back</h4>
+            <h2 className="ms-5 pt-2 custom-font">Sign in to JUMPSTART</h2>
           </div>
         </div>
         <div className="col-md-8 p-0">
@@ -77,17 +89,17 @@ function Login() {
             <div className="card-header bg-transparent px-5 pt-5 m-5 border-1">
               <h5 className="text-muted text-end py-2 pb-4">
                 Do not have an account?{" "}
-                <Link to="/register" className="TC fw-bold">
+                <Link to="/register" className="TC fw-bold custom-font">
                   Sign Up
                 </Link>
               </h5>
             </div>
             <div className="card-body mx-5 px-5">
               <div>
-                <h3 className="pb-5 mt-3 text-muted">Your account details</h3>
+                <h3 className="pb-5 mt-3 text-muted custom-font">Your account details</h3>
               </div>
               <div className="form-inner text-dark">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="custom-font">
                   <div className="form-floating mb-3">
                     <input
                       type="email"
@@ -109,24 +121,56 @@ function Login() {
                     <label htmlFor="password">Password</label>
                   </div>
 
+                  <div className="mt-4 custom-font">
+                    <Button 
+                      type="primary custom-button"
+                      className=" custom-font"
+                      onClick={showModal}>
+                        Are you an Exclusive Member?
+                    </Button>
+                    <Modal
+                      title="Are you a Jumpstart Member?"
+                      className="custom-font"
+                      visible={open}
+                      onCancel={handleCancel}
+                      centered
+                      // bodyStyle={{
+                      //   display: "flex",
+                      //   justifyContent: "center",
+                      //   alignItems: "center",
+                      // }}
+                      >
+
+                      <div className="form-group form-floating mb-3">
+                        <input
+                          type="text"
+                          className=""
+                          id="member"
+                          placeholder="Enter your Members Number"/>
+                        <label htmlFor="member"></label>
+                      </div>
+
+                    </Modal>
+                  </div>
+
                   <div className="py-3 fs-5">
-                    <div className="mt-5">
-                      <Link to="#" className="TC fw-bold">
+                    <div className="mt-4">
+                      <Link to="#" className="TC fw-bold custom-font">
                         Forgot your password?
                       </Link>
                     </div>
                   </div>
                   <div className="card-footer bg-transparent text-center mt-5 py-5 border-1">
                     <div className="mt-3">
-                      <span className="fs-6 text-muted">
-                        By continuing, you agree to the JumpStart{" "}
-                        <Link to="/termsandconditions" className="TC fw-bold">
+                      <span className="fs-6 text-muted custom-font">
+                        By continuing, you agree to the Jumpstart{" "}
+                        <Link to="/termsandconditions" className="TC fw-bold custom-font">
                           Terms and Conditions
                         </Link>
                       </span>
                     </div>
                     <button
-                      className="btn btn-outline btn-custom btn-lg btn-block mt-3"
+                      className="btn btn-outline btn-custom btn-lg btn-block mt-3 custom-font"
                       type="submit"
                       style={{ width: "100%" }}
                     >

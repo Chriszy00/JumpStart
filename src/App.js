@@ -5,6 +5,10 @@ import { ACCESS_TOKEN } from "./constant";
 import Login from "./components/common/Login";
 import Registration from "./components/common/register";
 import LoadingIndicator from "./components/common/LoadingIndicator";
+import Membership from "./components/common/member";
+import Home from "./components/common/Home";
+import "./App.css"
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
   // constructor(props) {
@@ -67,6 +71,9 @@ class App extends Component {
       <Routes>
       <Route path="/login" element={<Login onLogin={this.handleLogin} />} />
       <Route path="/register" element={<Registration />} />
+      <Route path="/membership" element={<Membership/>}/>
+      <Route path="/home" element={<Home/>}/>
+
 
       </Routes>
      </Router>

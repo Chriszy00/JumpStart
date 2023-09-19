@@ -167,7 +167,7 @@ const Register = () => {
   }
 
   return (
-    <div className="container-fluid min-vh-100 bg custom-font custom-vh">
+    <div className="container-fluid min-vh-100 bg custom-font custom-vh" style={{ backgroundColor: "#fcf3f6" }}>
       <div className="row">
         <div className="col-md-4">
           <div className=" welcome-register">
@@ -176,24 +176,24 @@ const Register = () => {
             </div>
 
             <div className="custome-font">
-              <h4 className="text-muted ms-5 pt-1">Welcome to JUMPSTART</h4>
-              <h2 className="ms-5 pt-2">Create Your Account</h2>
+              <h4 className="text-muted ms-5 pt-1 custom-font">Welcome to JUMPSTART</h4>
+              <h2 className="ms-5 pt-2 custom-font">Create Your Account</h2>
             </div>
           </div>
         </div>
         <div className="col-md-8 p-0">
           <div className="card rounded-top-left shadow">
             <div className="card-header bg-transparent px-5 pt-5 m-5 border-1">
-              <h5 className="text-muted text-end py-2 pb-4">
+              <h5 className="text-muted text-end py-2 pb-4 custom-font">
                 Already have an account?{" "}
-                <Link to="/login" className="TC fw-bold">
+                <Link to="/login" className="TC fw-bold custom-font">
                   Login
                 </Link>
               </h5>
             </div>
             <div className="card-body p-0 mx-5">
               <div>
-                <h3 className=" ms-5 text-muted">Your account details</h3>
+                <h3 className=" ms-5 text-muted custom-font">Your account details</h3>
               </div>
 
               {/* First Name Field */}
@@ -326,7 +326,7 @@ const Register = () => {
                     <input
                       type="text"
                       className={passwordInputClass}
-                      id="floatingPassword"
+                      id=""
                       placeholder="Enter your Membership Number"
                       onChange={handlePasswordChange}
                     />
@@ -366,14 +366,14 @@ const Register = () => {
                   </div>
                   <div className="card-footer bg-transparent py-5 mt-5 border-1">
                     <div className="text-center">
-                      <span className="fs-6 text-muted">
-                        By continuing, you agree to the JumpStart{" "}
-                        <Link to="/termsandconditions" className="TC fw-bold">
+                      <span className="fs-6 text-muted custom-font">
+                        By continuing, you agree to the Jumpstart{" "}
+                        <Link to="/termsandconditions" className="TC fw-bold custom-font">
                           Terms and Conditions
                         </Link>
                       </span>
                       <button
-                        className="btn btn-outline btn-custom btn-lg btn-block mt-3"
+                        className="btn btn-outline btn-custom btn-lg btn-block mt-3 custom-font"
                         type="submit"
                         style={{ width: "100%" }}
                       >

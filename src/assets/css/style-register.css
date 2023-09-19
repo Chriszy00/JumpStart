@@ -40,17 +40,18 @@ a {
   display: flex;
 }
 
-/* .image-holder {
-  background: url("../../assets/images/merryOnwheels.png") no-repeat;
+ /* .image-holder {
+  background: url("../../assets/images/jumpstart.png") no-repeat;
   background-size: cover;
-  width: 270px;
-  height: 150px;
+  width: 290px;
+  height: 95px;
   margin-left: 5%;
   padding: 0;
-}
+ } */
+
 .image-holder img {
   display: none;
-} */
+} 
 
 .rounded-top-left {
   border-top-left-radius: 10%; /* Adjust the value to control the roundedness */
@@ -83,7 +84,7 @@ form {
 }
 
 .password-validation-box {
-  border: 1px solid #22a699;
+  border: 1px solid #299eb3;
   border-radius: 25px;
   background-color: #e7f0f7;
   padding: 10px;
@@ -107,8 +108,8 @@ form {
 }
 
 .btn-custom {
-  background-color: #f2be22;
-  color: black;
+  background-color: #d0472f;
+  color: white;
   border: none;
 }
 
@@ -125,11 +126,11 @@ form {
 }
 
 .TC{
-  color: #22a699;
+  color: #299eb3;
 }
 
 .custom-text {
-  color: #22a699;
+  color: #299eb3;
 }
 
 .custom-vh {
